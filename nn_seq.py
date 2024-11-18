@@ -33,11 +33,13 @@ class Ycy(nn.Module):
         x = self.model1(x)
         return x
 
-writer = SummaryWriter("logs")
-ycy = Ycy()
 
-input = torch.randn(64, 3, 32, 32)
-output = ycy(input)
+if __name__ == '__main__':
+    writer = SummaryWriter("logs")
+    ycy = Ycy()
 
-writer.add_graph(ycy, input)
-writer.close()
+    input = torch.randn(64, 3, 32, 32)
+    output = ycy(input)
+
+    writer.add_graph(ycy, input)
+    writer.close()
