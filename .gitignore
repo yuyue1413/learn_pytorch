@@ -1,3 +1,10 @@
 dataset/
+
 logs/
+
 pths/
+
+/data
+
+*.xml
+*.iml
